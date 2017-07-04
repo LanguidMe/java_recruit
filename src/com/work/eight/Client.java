@@ -10,6 +10,7 @@ public class Client {
 		try {
 			Socket socket = new Socket("127.0.0.1", 8080);
 			PrintWriter printWriter = new PrintWriter(socket.getOutputStream());
+			//DataOutputStream dataOutputStream = new DataOutputStream(socket.getOutputStream());
 			BufferedReader kReader = new BufferedReader(new InputStreamReader(System.in));
 			String str = kReader.readLine();
 			while(!str.equals("stop")){
